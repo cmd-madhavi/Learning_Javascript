@@ -1,0 +1,43 @@
+Window object
+It is a global object for JS code and represents the “browser window” and provides methods to control it.
+
+DOM(Document Object Model)
+DOM represents all page content as objects that can be modified. The document object is the main entry point for the page.
+Every html tag is an object
+
+In DOM null means does not exist
+
+
+elem.childNodes - return a collection(iterable like array, but other array methods won't work), and this includes text nodes and 
+comment nodes too
+
+attributes ; firstChild, lastChild, parentNode
+method : hasChildNodes()
+
+DOM collections are read only - i.e we can't do this elem.childNodes[i] = newNode;
+DOM collections are live - i.e. if we have a reference to elem.childNodes, and we remove nodes from it then it will reflect in the
+reference, there are minor exceptions
+
+Use for...of loop to iterate over DOM collections
+Descendants - all the direct children and the nested children 
+
+Navigation here we are referring as properties use to navigate the html document
+Now lets see navigation properties that only take care of element tags(and not text and comment nodes)
+parentElement - same as parentNode as most have element node(tag) as a parent, exception is <html> its parent is document which is not a element node
+children
+
+Certian DOM elements like table, form have additional properties specific to the element
+
+
+document.getElementById - it can be only called with document obj not with any element, as it seraches for the Id in the whole document
+
+elem.querySelectorAll - it is the most versatile method it return a collection of elements inside the elem that matches the 
+given css selector, :hover, :active can also be used inside this
+
+
+elem.matches(css) - it return true/false only, not the element
+
+
+BOM(Browser Object Model)
+It represents additional objects provided by the Browser(host environment) for working with everything except document
+Like navigator, location, the function alert, prompt, confirm are also part of this
